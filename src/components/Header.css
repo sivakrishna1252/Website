@@ -1,0 +1,229 @@
+/* ===== Header Styles - Minimal & Clean ===== */
+.header {
+  background-color: #ffffff;
+  border-bottom: 1px solid var(--color-border);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  padding: 4px 0;
+}
+
+/* common layout (mobile + desktop) */
+.header-content {
+  display: flex;
+  justify-content: space-between; /* default for mobile */
+  align-items: center;
+  padding: var(--spacing-md) 0;
+  gap: 0.5rem;
+}
+
+/* LOGO – center on desktop using order */
+.logo {
+  text-decoration: none;
+  color: var(--color-text);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  transition: opacity 0.3s ease;
+  flex: 0 0 auto;
+  order: 2;
+}
+
+.logo:hover {
+  opacity: 0.8;
+}
+
+.logo-image {
+  height: 50px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.logo-text {
+  font-size: 1.4rem;
+  margin: 0;
+  font-weight: 700;
+  display: block;
+  font-family: var(--font-heading);
+  color: var(--color-text);
+}
+
+/* Hide text when logo image is present */
+.logo img.logo-image[src] ~ .logo-text {
+  display: none;
+}
+
+/* Desktop Navigation groups */
+.desktop-nav-left,
+.desktop-nav-right {
+  display: none;
+  gap: 1.8rem;
+  align-items: center;
+  flex: 0 0 auto;
+}
+
+.desktop-nav-left {
+  order: 1; /* left of logo */
+}
+
+.desktop-nav-right {
+  order: 3; /* right of logo */
+}
+
+/* single nav link */
+.nav-link {
+  color: var(--color-text);
+  font-weight: 500;
+  font-size: 0.95rem;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  transition: color var(--transition-fast);
+  position: relative;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--color-primary);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: var(--spacing-sm);
+  right: var(--spacing-sm);
+  height: 2px;
+  background-color: var(--color-primary);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform var(--transition-fast);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  transform: scaleX(1);
+}
+
+/* Mobile Menu Button */
+.mobile-menu-btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1001;
+}
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 24px;
+  height: 18px;
+}
+
+.hamburger span {
+  display: block;
+  height: 2px;
+  width: 100%;
+  background-color: var(--color-text);
+  border-radius: 2px;
+  transition: all var(--transition-normal);
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(8px, 8px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* Mobile Navigation */
+.mobile-nav {
+  display: flex;
+  flex-direction: column;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height var(--transition-normal);
+  background-color: var(--color-white);
+  border-top: 1px solid var(--color-border);
+}
+
+.mobile-nav.open {
+  max-height: 400px;
+  padding: var(--spacing-sm) 0;
+}
+
+.mobile-nav-link {
+  display: block;
+  padding: var(--spacing-sm) var(--spacing-md);
+  color: var(--color-text);
+  font-weight: 500;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: background-color var(--transition-fast), color var(--transition-fast);
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+}
+
+.mobile-nav-link:hover {
+  background-color: var(--color-bg-light);
+  color: var(--color-primary);
+}
+
+/* Tablet Styles */
+@media (min-width: 768px) {
+  .logo-image {
+    height: 48px;
+  }
+
+  .logo-text {
+    font-size: 1.35rem;
+  }
+
+  .mobile-menu-btn {
+    display: none;
+  }
+
+  .mobile-nav {
+    display: none;
+  }
+
+  .desktop-nav-left,
+  .desktop-nav-right {
+    display: flex;
+  }
+}
+
+/* Desktop Styles */
+@media (min-width: 1024px) {
+  .header-content {
+    padding: 4px 0;
+    justify-content: center; /* 🔥 center: left nav – logo – right nav */
+    gap: 4rem;               /* space between groups */
+  }
+
+  .logo-image {
+    height: 54px;
+  }
+
+  .logo-text {
+    font-size: 1.5rem;
+  }
+
+  .nav-link {
+    font-size: 1rem;
+  }
+}
