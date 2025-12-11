@@ -3,3 +3,9 @@ dist/
 build/
 .env
 .DS_Store
+
+
+#git update
+#git add .
+#git commit -m "Improved service card UI readability"
+#git push
