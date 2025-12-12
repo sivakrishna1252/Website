@@ -15,15 +15,15 @@
 
 :root {
   /* Color Palette - Vibrant Premium Tan/Gold with Depth */
-  --color-primary: #c4a574;
+  --color-primary: #783f64;
   /* rich tan */
-  --color-secondary: #a67c52;
+  --color-secondary: #783f64;
   /* deep brown-tan */
-  --color-accent: #d9b88f;
+  --color-accent: #783f64;
   /* warm beige */
-  --color-gold: #d4a650;
+  --color-gold: #783f64;
   /* vibrant gold */
-  --color-gold-light: #e8c589;
+  --color-gold-light: #783f64;
   /* light gold */
   --color-text: #2d2419;
   /* dark brown */
@@ -220,14 +220,14 @@ a:hover {
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, #c4a574 0%, #d4a650 100%);
+  background: linear-gradient(135deg, #783f64 0%, #783f78 100%);
   color: var(--color-white);
   border-color: transparent;
   box-shadow: var(--shadow-md);
 }
 
 .btn-primary:hover {
-  background: linear-gradient(135deg, #a67c52 0%, #c4a574 100%);
+  background: linear-gradient(135deg, #783f64 0%, #783f64 100%);
   border-color: transparent;
   transform: translateY(-2px) scale(1.02);
   box-shadow: var(--shadow-lg);

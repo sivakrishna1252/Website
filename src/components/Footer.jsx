@@ -99,12 +99,12 @@ function Footer() {
               <div className="footer-contact">
              
 
-                <div className="footer-contact-details">
+                <div className="footer-nav">
                   <p>
                     <a href="tel:+15551234567">+1 (555) 123-4567</a>
                   </p>
                   <p>
-                    <a href="mailto:info@eandidecor.com">info@eandidecor.com</a>
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=info@eandidecor.com">info@eandidecor.com</a>
                   </p>
                   <p>123 Event St, Party City, USA</p>
                 </div>

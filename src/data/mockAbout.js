@@ -42,4 +42,3 @@ export const mockAbout = {
     yearsExperience: "10+"
   }
 };
-

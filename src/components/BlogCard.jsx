@@ -32,4 +32,3 @@ function BlogCard({ post }) {
 }
 
 export default BlogCard;
-

@@ -9,3 +9,4 @@ build/
 #git add .
 #git commit -m "Improved service card UI readability"
 #git push
+# <p className="hero-tagline">{mockAbout.tagline}</p>

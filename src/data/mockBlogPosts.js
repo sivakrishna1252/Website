@@ -66,4 +66,3 @@ export const mockBlogPosts = [
     tags: ["photography", "memories", "documentation"]
   }
 ];
-

@@ -72,4 +72,3 @@ function Lightbox({ image, onClose, onNext, onPrevious, totalImages, currentInde
 }
 
 export default Lightbox;
-

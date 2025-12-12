@@ -17,7 +17,7 @@
 }
 
 .gallery-filters {
-  background-color: var(--color-bg-light);
+  background-color: #c5a7af;
   padding: var(--spacing-md) 0;
   /* Make the filter panel rounded to match buttons */
   border-radius: 8px;
