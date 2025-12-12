@@ -139,7 +139,7 @@ function HomePage() {
       <section className="blog-preview section">
         <div className="container">
           <h2 className="section-title">Latest from Our Blog</h2>
-          <p className="section-subtitle" style={{color: 'black'}}>Insights, tips, and inspiration for your next event</p>
+          <p className="footer-tagline">Insights, tips, and inspiration for your next event</p>
           <div className="blog-grid grid grid-3">
             {featuredBlogs.map((post) => (
               <BlogCard key={post.id} post={post} />
@@ -156,7 +156,7 @@ function HomePage() {
         <div className="container">
           <div className="cta-content">
             <h2 className="section-title">Ready to Create Your Perfect Event?</h2>
-            <p className="section-subtitle" style={{color: '#ffff7'}}>Let's work together to bring your vision to life</p>
+            <p className="section-subtitle" style={{color: '#ffffff'}}>Let's work together to bring your vision to life</p>
             <Link to="/contact" className="btn btn-primary">Contact Us Today</Link>
           </div>
         </div>
