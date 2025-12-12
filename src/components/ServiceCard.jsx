@@ -13,7 +13,7 @@ function ServiceCard({ service }) {
       <div className="service-content">
         <h3 className="service-title">{service.title}</h3>
         {/* Optional: Add short description or keep it clean like the reference */}
-        <Link to="/services" className="btn">
+        <Link to="/Blog" className="btn">
           Know More <span className="arrow">→</span>
         </Link>
       </div>

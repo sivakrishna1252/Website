@@ -21,11 +21,11 @@ function ServicesPage() {
             ))}
           </div>
         </section>
-          <section className="cta-section section">
+          <section className="services-preview">
             <div className="container">
              <div className="cta-content">
-            <h2>Ready to Create Your Perfect Event?</h2>
-            <p>Let's work together to bring your vision to life</p>
+            <h2 className="section-title">Ready to Create Your Perfect Event?</h2>
+            <p  className="section-subtitle" style={{color: '#ffffff'}}>Let's work together to bring your vision to life</p>
        
             <a href="/contact" className="btn btn-primary">Contact Us Today</a>
           </div>
