@@ -39,7 +39,7 @@
 }
 
 .highlight-text {
-  color: var(--color-primary);
+  color: #A0816C;
   /* Use primary color (Teal/Green equivalent in theme) */
 }
 
@@ -50,6 +50,15 @@
   border-radius: 4px;
   margin-bottom: var(--spacing-lg);
   border: 1px solid #c3e6cb;
+}
+
+.error-message-box {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: var(--spacing-md);
+  border-radius: 4px;
+  margin-bottom: var(--spacing-lg);
+  border: 1px solid #f5c6cb;
 }
 
 .contact-form {
@@ -65,7 +74,7 @@
   display: block;
   margin-bottom: var(--spacing-xs);
   font-weight: 500;
-  color: var(--color-text);
+  color: #D1C0A8;
 }
 
 .form-group input,
@@ -75,15 +84,15 @@
   font-size: 1rem;
   /* Prevents zoom on iOS */
   font-family: var(--font-primary);
-  border: 1px solid var(--color-border);
+  border: 1px solid #D1C0A8;
   border-radius: 4px;
-  transition: border-color var(--transition-fast);
+  transition: border-color #D1C0A8;
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
   outline: none;
-  border-color: var(--color-primary);
+  border-color: #D1C0A8;
 }
 
 .form-group input.error,
@@ -121,7 +130,7 @@
 }
 
 .contact-icon {
-  color: var(--color-primary);
+  color: #A0816C;
   flex-shrink: 0;
 }
 
@@ -137,7 +146,7 @@
 
 .icon-item a:hover {
   text-decoration: underline;
-  color: var(--color-primary);
+  color: #A0816C;
 }
 
 .business-hours {
@@ -152,7 +161,7 @@
 
 .info-item h3 {
   font-size: 1.1rem;
-  color: var(--color-primary);
+  color: #A0816C;
   margin-bottom: var(--spacing-xs);
 }
 

@@ -1,6 +1,7 @@
 /* ===== FOOTER WRAPPER – FULL BLACK ===== */
 .footer {
-  background: #28282B	;          /* full width black */
+  background: #28282B;
+  /* full width black */
   padding: 3rem 0 1.5rem;
   width: 100%;
   color: #ffffff;
@@ -44,7 +45,8 @@
   font-size: 1.3rem;
   font-weight: 600;
   margin: 0 0 0.75rem;
-  color: #e386a3;         /* gold heading */
+  color: #A0816C;
+  /* gold heading */
 }
 
 .footer-tagline {
@@ -59,7 +61,7 @@
   font-size: 0.95rem;
   font-weight: 600;
   margin: 0 0 0.5rem;
-  color: #e386a3;
+  color: #A0816C;
 }
 
 /* nav links */
@@ -80,7 +82,8 @@
 
 .footer-nav a:hover {
   opacity: 1;
-  color: #c5a7af;        /* gold on hover */
+  color: #D1C0A8;
+  /* gold on hover */
 }
 
 /* contact text */
@@ -119,7 +122,7 @@
 .social-links a:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.35);
-  background: #c5a7af;
+  background: #D1C0A8;
 }
 
 .social-links a:hover svg {
@@ -141,7 +144,7 @@
 .footer-bottom p {
   margin: 0;
   font-size: 0.8rem;
-  color: #e386a3;
+  color: #BFAA8C;
 }
 
 /* responsive */

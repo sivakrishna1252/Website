@@ -52,12 +52,14 @@ function HomePage() {
         <div className="container">
 
           <div className="hero-content">
-            <h1 className="hero-title">{mockAbout.companyName}</h1>
-           
-           
+            <h1 className="hero-title">
+              E<span className="highlight">&</span>L DECOR<span className="highlight">&</span>MORE
+            </h1>
+
+
             <div className="hero-buttons">
               <Link to="/contact" className="btn btn-primary">Get Started</Link>
-              <Link to="/Blog" className="btn ">Our Insights</Link>
+              <Link to="/Blog" className="btn btn-secondary" style={{ color: 'black' }}>Our Insights</Link>
             </div>
           </div>
         </div>
@@ -130,7 +132,7 @@ function HomePage() {
           </div>
 
           <div className="section-cta">
-             <Link to="/contact" className="btn btn-primary">Contact Us Today</Link>
+            <Link to="/contact" className="btn btn-primary">Contact Us Today</Link>
           </div>
         </div>
       </section>
@@ -156,7 +158,7 @@ function HomePage() {
         <div className="container">
           <div className="cta-content">
             <h2 className="section-title">Ready to Create Your Perfect Event?</h2>
-            <p className="section-subtitle" style={{color: '#ffffff'}}>Let's work together to bring your vision to life</p>
+            <p className="section-subtitle" style={{ color: 'black' }}>Let's work together to bring your vision to life</p>
             <Link to="/contact" className="btn btn-primary">Contact Us Today</Link>
           </div>
         </div>

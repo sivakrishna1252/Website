@@ -60,7 +60,7 @@ function Footer() {
                 </a>
 
                 {/* Check / Services */}
-                
+
 
                 {/* YouTube */}
                 <a href="https://youtube.com" aria-label="YouTube">
@@ -89,7 +89,7 @@ function Footer() {
                 <Link to="/Gallery">Gallery</Link>
                 <Link to="/Blog">Blog</Link>
                 <Link to="/Contact">Contact</Link>
-         
+
               </nav>
             </div>
 
@@ -97,14 +97,14 @@ function Footer() {
             <div className="footer-section">
               <h4>Contact</h4>
               <div className="footer-contact">
-             
+
 
                 <div className="footer-nav">
                   <p>
                     <a href="tel:+15551234567">+1 (555) 123-4567</a>
                   </p>
                   <p>
-                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=info@eandidecor.com">info@eandidecor.com</a>
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=sivatools1252@gmail.com">eandldecoreandmore@gmail.com</a>
                   </p>
                   <p>123 Event St, Party City, USA</p>
                 </div>

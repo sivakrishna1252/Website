@@ -1,8 +1,36 @@
-import { mockBlogPosts } from '../data/mockBlogPosts';
+import { useState, useEffect } from 'react';
 import BlogCard from '../components/BlogCard';
+import { mockBlogPosts } from '../data/mockBlogPosts';
 import './BlogPage.css';
 
+const API_URL = 'http://localhost:8008/api/blogs/published/';
+
 function BlogPage() {
+  const [blogs, setBlogs] = useState(mockBlogPosts);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const fetchBlogs = async () => {
+      try {
+        const response = await fetch(API_URL);
+        if (response.ok) {
+          const realData = await response.json();
+          if (realData.length > 0) {
+            // Priority: Real blogs at start, fill remaining with mock blogs
+            // This replaces mock posts one-by-one
+            const combined = [...realData, ...mockBlogPosts.slice(realData.length)];
+            setBlogs(combined);
+          }
+        }
+      } catch (err) {
+        console.log('Backend unreachable, using mock data');
+      }
+    };
+
+    fetchBlogs();
+  }, []);
+
   return (
     <div className="blog-page">
       <div className="container">
@@ -15,11 +43,26 @@ function BlogPage() {
         </section>
 
         <section className="blog-list section">
-          <div className="blog-grid grid grid-3">
-            {mockBlogPosts.map((post) => (
-              <BlogCard key={post.id} post={post} />
-            ))}
-          </div>
+          {loading ? (
+            <div className="loading-container">
+              <div className="loader"></div>
+              <p>Loading inspiration...</p>
+            </div>
+          ) : error ? (
+            <div className="error-container">
+              <p>Oops! {error}. Please try again later.</p>
+            </div>
+          ) : blogs.length === 0 ? (
+            <div className="no-blogs">
+              <p>No blog posts found. Check back soon!</p>
+            </div>
+          ) : (
+            <div className="blog-grid grid grid-3">
+              {blogs.map((post) => (
+                <BlogCard key={post.id} post={post} />
+              ))}
+            </div>
+          )}
         </section>
       </div>
     </div>

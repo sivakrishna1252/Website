@@ -12,7 +12,8 @@
 /* common layout (mobile + desktop) */
 .header-content {
   display: flex;
-  justify-content: space-between; /* default for mobile */
+  justify-content: space-between;
+  /* default for mobile */
   align-items: center;
   padding: var(--spacing-md) 0;
   gap: 0.5rem;
@@ -51,7 +52,7 @@
 }
 
 /* Hide text when logo image is present */
-.logo img.logo-image[src] ~ .logo-text {
+.logo img.logo-image[src]~.logo-text {
   display: none;
 }
 
@@ -65,11 +66,13 @@
 }
 
 .desktop-nav-left {
-  order: 1; /* left of logo */
+  order: 1;
+  /* left of logo */
 }
 
 .desktop-nav-right {
-  order: 3; /* right of logo */
+  order: 3;
+  /* right of logo */
 }
 
 /* single nav link */
@@ -84,7 +87,7 @@
 
 .nav-link:hover,
 .nav-link.active {
-  color: var(--color-primary);
+  color: #A0816C;
 }
 
 .nav-link::after {
@@ -94,7 +97,7 @@
   left: var(--spacing-sm);
   right: var(--spacing-sm);
   height: 2px;
-  background-color: var(--color-primary);
+  background-color: #A0816C;
   transform: scaleX(0);
   transform-origin: center;
   transition: transform var(--transition-fast);
@@ -211,8 +214,10 @@
 @media (min-width: 1024px) {
   .header-content {
     padding: 4px 0;
-    justify-content: center; /* 🔥 center: left nav – logo – right nav */
-    gap: 4rem;               /* space between groups */
+    justify-content: center;
+    /* 🔥 center: left nav – logo – right nav */
+    gap: 4rem;
+    /* space between groups */
   }
 
   .logo-image {
