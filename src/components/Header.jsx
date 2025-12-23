@@ -57,12 +57,24 @@ function Header() {
           </button>
         </div>
 
-        {/* Mobile Navigation */}
+        {/* Mobile Navigation - Side Drawer */}
+        <div className={`mobile-nav-overlay ${isMenuOpen ? 'open' : ''}`} onClick={closeMenu}></div>
         <nav className={`mobile-nav ${isMenuOpen ? 'open' : ''}`}>
-          <Link to="/" className="mobile-nav-link" onClick={closeMenu}>Home</Link>
-          <Link to="/gallery" className="mobile-nav-link" onClick={closeMenu}>Gallery</Link>
-          <Link to="/blog" className="mobile-nav-link" onClick={closeMenu}>Blog</Link>
-          <Link to="/contact" className="mobile-nav-link" onClick={closeMenu}>Contact</Link>
+          <div className="mobile-nav-header">
+            <button className="mobile-close-btn" onClick={closeMenu} aria-label="Close menu">
+              <span className="close-icon">×</span>
+            </button>
+            <div className="mobile-nav-logo">
+              <img src="/logo.png" alt="Logo" className="logo-image" />
+            </div>
+          </div>
+
+          <div className="mobile-nav-links">
+            <Link to="/" className="mobile-nav-link" onClick={closeMenu}>Home</Link>
+            <Link to="/gallery" className="mobile-nav-link" onClick={closeMenu}>Gallery</Link>
+            <Link to="/blog" className="mobile-nav-link" onClick={closeMenu}>Blog</Link>
+            <Link to="/contact" className="mobile-nav-link" onClick={closeMenu}>Contact</Link>
+          </div>
         </nav>
       </div>
     </header>

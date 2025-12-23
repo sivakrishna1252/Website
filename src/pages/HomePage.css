@@ -74,7 +74,8 @@
 }
 
 .hero-title {
-    font-size: 2rem;
+    font-size: 2.5rem;
+    /* Increased base size for better desktop view */
     font-weight: 700;
     margin-bottom: calc(var(--spacing-md) + 4px);
     line-height: 1.15;
@@ -95,7 +96,6 @@
     line-height: 72px;
     /* Thinner weight for the ampersand if desired, or keep bold */
     vertical-align: middle;
-
 }
 
 .hero-tagline {
@@ -191,9 +191,24 @@
     }
 
     .embla__slide {
-        padding: 0 8px;
-        flex: 0 0 85%;
+        padding: 0 16px;
+        flex: 0 0 100%;
+        /* One card fully visible */
         flex-shrink: 0;
+    }
+
+    .hero-title {
+        font-size: 32px !important;
+        line-height: 37px !important;
+        letter-spacing: 0.15em;
+    }
+
+    .highlight {
+        font-size: 37px !important;
+        /* Matches Size 37px from image */
+        line-height: 37px !important;
+        /* Matches Line Height 37px from image */
+        vertical-align: middle;
     }
 }
 
