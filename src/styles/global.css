@@ -88,6 +88,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 /* ===== Typography ===== */
@@ -142,6 +144,11 @@ a:hover {
 }
 
 /* ===== Container & Layout ===== */
+.main-content {
+  margin-top: 65px;
+  /* Adjust based on header height */
+}
+
 .container {
   width: 100%;
   max-width: 1200px;
@@ -217,6 +224,11 @@ a:hover {
   color: var(--color-white);
   transform: translateY(-2px);
   box-shadow: var(--shadow-md);
+}
+
+.btn:active {
+  transform: translateY(0);
+  box-shadow: var(--shadow-sm);
 }
 
 .btn-primary {

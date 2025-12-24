@@ -6,7 +6,7 @@
 
 /* Common Section Styles */
 .section {
-    padding: var(--spacing-xxl) 0;
+    padding: var(--spacing-xl) 0;
     position: relative;
 }
 
@@ -32,8 +32,8 @@
 /* ===== Hero Section ===== */
 .hero {
     position: relative;
-    /* Slightly reduced min-height to allow comfortable padding on large screens */
-    min-height: 72vh;
+    /* Hero should be full height on larger screens */
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -42,9 +42,10 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    /* Add vertical padding so content breathes on tall and short viewports */
-    padding: 3.5rem 1.5rem;
+    padding: 0;
+    /* Removing extra padding to eliminate gap */
     color: #ffffff;
+    margin-bottom: 0;
 }
 
 .hero::before {
@@ -141,24 +142,26 @@
     }
 }
 
-/* ===== Alternating Sections ===== */
 /* About Preview Section (White) */
 .about-preview {
     background-color: var(--color-bg);
-    padding: var(--spacing-xxl) 0;
+    padding: var(--spacing-md) 0 var(--spacing-xxl) 0;
+    margin-top: -1px;
+    /* Overlap to prevent thin white line */
 }
 
 /* Services Preview Section (Lite Gold) */
 .services-preview {
     background-color: #E8DED1;
-    padding: var(--spacing-xxl) 0;
+    padding: var(--spacing-xl) 0;
 }
 
 /* ===== Embla Carousel Styles ===== */
 .embla {
     overflow: hidden;
     padding: var(--spacing-sm) 0;
-    /* Add vertical padding for shadow visibility */
+    flex: 1;
+    /* Take full space between arrows */
 }
 
 .embla__container {
@@ -176,20 +179,55 @@
 
 .embla__slide {
     box-sizing: border-box;
-    padding: 0 12px;
-    /* horizontal spacing per slide (creates consistent gutters)
-                       adjust in media queries below for responsiveness */
-    flex: 0 0 85%;
+    padding: 0 10px;
+    flex: 0 0 100%;
     min-width: 0;
-    flex-shrink: 0;
+}
+
+/* Carousel wrapper with arrows */
+.services-carousel-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0 1rem;
+}
+
+.carousel-arrow {
+    background: white;
+    border: none;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.3s ease;
+    color: var(--color-text);
+}
+
+.carousel-arrow:hover {
+    background: #A0816C;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .carousel-arrow {
+        display: none;
+        /* Hide arrows on mobile to keep it neat */
+    }
+
+    .services-carousel-wrapper {
+        padding: 0;
+        gap: 0;
+    }
 }
 
 /* Mobile Gap */
 @media (max-width: 767px) {
-    .embla__container {
-        gap: 0;
-    }
-
     .embla__slide {
         padding: 0 16px;
         flex: 0 0 100%;
@@ -205,10 +243,13 @@
 
     .highlight {
         font-size: 37px !important;
-        /* Matches Size 37px from image */
         line-height: 37px !important;
-        /* Matches Line Height 37px from image */
         vertical-align: middle;
+    }
+
+    .embla__slide {
+        padding: 0 8px;
+        flex: 0 0 100%;
     }
 }
 
@@ -248,7 +289,7 @@
     }
 
     .embla__slide {
-        padding: 0 12px;
+        padding: 0 10px;
         flex: 0 0 50%;
         flex-shrink: 0;
     }
@@ -257,8 +298,8 @@
 /* Desktop Styles */
 @media (min-width: 1024px) {
     .embla__slide {
-        padding: 0 16px;
-        flex: 0 0 28%;
+        padding: 0 12px;
+        flex: 0 0 33.333%;
         flex-shrink: 0;
     }
 }
@@ -432,8 +473,21 @@
     width: 100%;
     aspect-ratio: 1;
     object-fit: cover;
-    border-radius: 20px;
+    border-radius: 12px;
     transition: transform var(--transition-slow);
+}
+
+.img-wrapper {
+    padding: 6px;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.img-wrapper:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
 }
 
 .grid-img:hover {
@@ -458,8 +512,8 @@
 
 @media (min-width: 768px) {
     .hero {
-        min-height: 300px;
-        padding: calc(var(--spacing-xxl) * 1.5) 0;
+        min-height: 100vh;
+        padding: 0;
     }
 
     .hero-title {
@@ -479,7 +533,20 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: var(--spacing-xxl);
-        align-items: center;
+        align-items: start;
+    }
+
+    .about-preview .section-title {
+        text-align: left;
+        margin-top: 0;
+        padding-bottom: var(--spacing-sm);
+        /* Tighten up */
+    }
+
+    .about-preview .section-title::after {
+        left: 0;
+        transform: none;
+        bottom: 0;
     }
 
     .about-content-grid {
@@ -489,8 +556,8 @@
 
 @media (min-width: 1024px) {
     .hero {
-        min-height: 400px;
-        padding: calc(var(--spacing-xxl) * 2) 0;
+        min-height: 100vh;
+        padding: 0;
     }
 
     .hero-title {

@@ -18,11 +18,11 @@ function BlogCard({ post }) {
           <img src={post.featured_image || post.featuredImage} alt={post.title} loading="lazy" />
         </div>
         <div className="blog-card-content">
+          <h3>{post.title}</h3>
+          <span className="blog-date">{formatDate(post.created_at || post.publishedDate)}</span>
           <div className="blog-card-meta">
             <span className="blog-category">{post.category || 'Events'}</span>
-            <span className="blog-date">{formatDate(post.created_at || post.publishedDate)}</span>
           </div>
-          <h3>{post.title}</h3>
           <p>{post.excerpt}</p>
 
         </div>

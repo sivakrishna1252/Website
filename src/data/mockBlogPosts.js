@@ -40,7 +40,7 @@ export const mockBlogPosts = [
   },
   {
     id: 3,
-    title: "Choosing the Perfect Venue for Your Event",
+    title: "Choosing the Perfect Venue for Your Event | E and L Decor",
     excerpt: "The venue sets the tone for your entire event. Discover what to consider when selecting the perfect location.",
     content: `
       <p>The venue sets the tone for your entire event. Discover what to consider when selecting the perfect location. The right venue can make your event, while the wrong one can break it.</p>

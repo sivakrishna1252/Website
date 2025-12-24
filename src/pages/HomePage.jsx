@@ -10,6 +10,7 @@ import Counter from '../components/Counter';
 import './HomePage.css';
 import useEmblaCarousel from 'embla-carousel-react';
 import Autoplay from 'embla-carousel-autoplay';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 function HomePage() {
   // Get first 6 services for carousel (more than 4 to show sliding)
@@ -71,7 +72,7 @@ function HomePage() {
           <div className="about-content">
             {/* Left Column - Text & Stats */}
             <div className="about-text-column">
-              <h4 className="section-title"  >About Us</h4>
+              <h2 className="section-title">About Us</h2>
               <div className="about-text-body">
                 <p>With over 15 years of experience in interior decoration, we've helped hundreds of families across the USA are create their dream homes. Our passion is transforming houses into personalized sanctuaries that reflect your unique style and personality.</p>
                 <p>We believe that great design should be accessible to everyone. Whether you're looking for a complete home makeover or just need help styling a single room, we're here to bring your vision to life.</p>
@@ -93,10 +94,10 @@ function HomePage() {
             {/* Right Column - Image Grid */}
             <div className="about-image-column">
               <div className="about-image-grid">
-                <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600&h=600&fit=crop" alt="Living Room" className="grid-img img-1" />
-                <img src="https://images.unsplash.com/photo-1617806118233-18e1de247200?w=600&h=600&fit=crop" alt="Dining Corner" className="grid-img img-2" />
-                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&h=600&fit=crop" alt="Bedroom" className="grid-img img-3" />
-                <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=600&h=600&fit=crop" alt="Dining Room" className="grid-img img-4" />
+                <div className="img-wrapper"><img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600&h=600&fit=crop" alt="Living Room" className="grid-img img-1" /></div>
+                <div className="img-wrapper"><img src="https://images.unsplash.com/photo-1617806118233-18e1de247200?w=600&h=600&fit=crop" alt="Dining Corner" className="grid-img img-2" /></div>
+                <div className="img-wrapper"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&h=600&fit=crop" alt="Bedroom" className="grid-img img-3" /></div>
+                <div className="img-wrapper"><img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=600&h=600&fit=crop" alt="Dining Room" className="grid-img img-4" /></div>
               </div>
             </div>
           </div>
@@ -109,14 +110,22 @@ function HomePage() {
           <h2 className="section-title">Our Services</h2>
           {/* <p className="section-subtitle">Comprehensive event management solutions tailored to your needs</p> */}
 
-          <div className="services-carousel embla" ref={emblaRef}>
-            <div className="embla__container">
-              {featuredServices.map((service) => (
-                <div className="embla__slide" key={service.id}>
-                  <ServiceCard service={service} />
-                </div>
-              ))}
+          <div className="services-carousel-wrapper">
+            <button className="carousel-arrow prev" onClick={() => emblaApi && emblaApi.scrollPrev()}>
+              <ChevronLeft size={24} />
+            </button>
+            <div className="services-carousel embla" ref={emblaRef}>
+              <div className="embla__container">
+                {featuredServices.map((service) => (
+                  <div className="embla__slide" key={service.id}>
+                    <ServiceCard service={service} />
+                  </div>
+                ))}
+              </div>
             </div>
+            <button className="carousel-arrow next" onClick={() => emblaApi && emblaApi.scrollNext()}>
+              <ChevronRight size={24} />
+            </button>
           </div>
 
           {/* Pagination Dots */}

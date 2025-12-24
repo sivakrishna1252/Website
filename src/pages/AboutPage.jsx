@@ -7,7 +7,7 @@ function AboutPage() {
       <div className="container">
         {/* Main About Section with Two Columns */}
         <section className="about-main section">
-          <h4 className="section-title">About Us</h4>
+          <h2 className="section-title">About Us</h2>
 
           <div className="about-content-grid">
             {/* Left Column - Text Content & Stats */}
@@ -53,40 +53,40 @@ function AboutPage() {
             {/* Right Column - Image Grid */}
             <div className="about-visual-content">
               <div className="about-image-grid">
-                <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600&h=600&fit=crop" alt="Living Room" className="grid-img img-1" />
-                <img src="https://images.unsplash.com/photo-1617806118233-18e1de247200?w=600&h=600&fit=crop" alt="Dining Corner" className="grid-img img-2" />
-                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&h=600&fit=crop" alt="Bedroom" className="grid-img img-3" />
-                <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=600&h=600&fit=crop" alt="Dining Room" className="grid-img img-4" />
+                <div className="img-wrapper"><img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600&h=600&fit=crop" alt="Living Room" className="grid-img img-1" /></div>
+                <div className="img-wrapper"><img src="https://images.unsplash.com/photo-1617806118233-18e1de247200?w=600&h=600&fit=crop" alt="Dining Corner" className="grid-img img-2" /></div>
+                <div className="img-wrapper"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&h=600&fit=crop" alt="Bedroom" className="grid-img img-3" /></div>
+                <div className="img-wrapper"><img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=600&h=600&fit=crop" alt="Dining Room" className="grid-img img-4" /></div>
               </div>
             </div>
           </div>
         </section>
 
         {/* Values Section */}
-  
-          <h2 className="section-title">Our Values</h2>
-          <div className="values-grid grid grid-2">
-            {mockAbout.values.map((value, index) => (
-              <div key={index} className="value-card">
-                <h3>{value.title}</h3>
-                <p>{value.description}</p>
-              </div>
-            ))}
-          </div>
-  
+
+        <h2 className="section-title">Our Values</h2>
+        <div className="values-grid grid grid-2">
+          {mockAbout.values.map((value, index) => (
+            <div key={index} className="value-card">
+              <h3>{value.title}</h3>
+              <p>{value.description}</p>
+            </div>
+          ))}
+        </div>
+
 
         {/* Team Section */}
-        
-          <h2 className="section-title">Our Team</h2>
-          <div className="team-grid grid grid-3">
-            {mockAbout.team.map((member, index) => (
-              <div key={index} className="team-card">
-                <h3>{member.name}</h3>
-                <p>{member.role}</p>
-              </div>
-            ))}
-          </div>
-      
+
+        <h2 className="section-title">Our Team</h2>
+        <div className="team-grid grid grid-3">
+          {mockAbout.team.map((member, index) => (
+            <div key={index} className="team-card">
+              <h3>{member.name}</h3>
+              <p>{member.role}</p>
+            </div>
+          ))}
+        </div>
+
       </div>
     </div>
   );

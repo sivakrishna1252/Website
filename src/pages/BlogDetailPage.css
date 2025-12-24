@@ -65,7 +65,9 @@
 .blog-post-header .blog-date {
   color: #888;
   font-size: 0.95rem;
-  align-self: center;
+  display: block;
+  margin-top: -8px;
+  margin-bottom: 12px;
 }
 
 .blog-post-header h1 {

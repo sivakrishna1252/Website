@@ -89,12 +89,21 @@
   width: 100%;
   aspect-ratio: 1;
   object-fit: cover;
-  border-radius: 20px;
+  border-radius: 12px;
   transition: transform var(--transition-slow);
 }
 
-.grid-img:hover {
-  transform: scale(1.03);
+.img-wrapper {
+  padding: 6px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.img-wrapper:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
 }
 
 /* Grid Layout Alignment */
@@ -186,16 +195,19 @@
 }
 
 /* Tablet Styles */
-.about-content-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--spacing-xxl);
-  align-items: start;
-}
+@media (min-width: 768px) {
+  .about-content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-xxl);
+    align-items: start;
+    margin-top: var(--spacing-xxl);
+  }
 
-.about-description,
-.about-mission {
-  font-size: 1.05rem;
+  .about-description,
+  .about-mission {
+    font-size: 1.05rem;
+  }
 }
 
 

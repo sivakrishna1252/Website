@@ -88,11 +88,11 @@ function BlogDetailPage() {
 
         <article className="blog-post">
           <header className="blog-post-header">
+            <h1 className="section-title">{post.title}</h1>
+            <span className="blog-date">{formatDate(post.created_at || post.publishedDate)}</span>
             <div className="blog-post-meta">
               <span className="blog-category">{post.category || 'Events'}</span>
-              <span className="blog-date">{formatDate(post.created_at || post.publishedDate)}</span>
             </div>
-            <h1 className="section-title">{post.title}</h1>
             <div className="blog-post-author-wrapper">
               <p className="blog-author">By {post.author || 'E and L Decor Team'}</p>
             </div>
@@ -107,7 +107,6 @@ function BlogDetailPage() {
 
           <div className="blog-post-footer">
             <div className="share-post">
-              <span>Share this post:</span>
               <div className="social-links">
                 {/* Social links placeholders */}
               </div>

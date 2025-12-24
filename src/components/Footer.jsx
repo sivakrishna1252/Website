@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { Phone, Mail, MapPin } from "lucide-react";
 import "./Footer.css";
 
 function Footer() {
@@ -83,7 +84,7 @@ function Footer() {
 
             {/* MIDDLE: Extra links */}
             <div className="footer-section">
-              <h4>Extra links</h4>
+              <h4>Quick links</h4>
               <nav className="footer-nav">
                 <Link to="/">Home</Link>
                 <Link to="/Gallery">Gallery</Link>
@@ -100,13 +101,18 @@ function Footer() {
 
 
                 <div className="footer-nav">
-                  <p>
+                  <p className="footer-contact-item">
+                    <Phone size={18} />
                     <a href="tel:+15551234567">+1 (555) 123-4567</a>
                   </p>
-                  <p>
+                  <p className="footer-contact-item">
+                    <Mail size={18} />
                     <a href="https://mail.google.com/mail/?view=cm&fs=1&to=sivatools1252@gmail.com">eandldecoreandmore@gmail.com</a>
                   </p>
-                  <p>123 Event St, Party City, USA</p>
+                  <p className="footer-contact-item">
+                    <MapPin size={18} />
+                    <span><a href="https://www.google.com/maps/place/123+Event+St,+Party+City,+USA">123 Event St, Party City, USA</a></span>
+                  </p>
                 </div>
               </div>
             </div>
