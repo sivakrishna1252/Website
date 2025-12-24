@@ -107,6 +107,10 @@ function BlogDetailPage() {
 
           <div className="blog-post-footer">
             <div className="share-post">
+
+
+
+
               <div className="social-links">
                 {/* Social links placeholders */}
               </div>
