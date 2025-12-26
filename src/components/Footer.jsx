@@ -86,11 +86,10 @@ function Footer() {
             <div className="footer-section">
               <h4>Quick links</h4>
               <nav className="footer-nav">
-                <Link to="/">Home</Link>
-                <Link to="/Gallery">Gallery</Link>
-                <Link to="/Blog">Blog</Link>
-                <Link to="/Contact">Contact</Link>
-
+                <Link to="/" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>Home</Link>
+                <Link to="/Gallery" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>Gallery</Link>
+                <Link to="/Blog" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>Blog</Link>
+                <Link to="/Contact" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>Contact</Link>
               </nav>
             </div>
 
